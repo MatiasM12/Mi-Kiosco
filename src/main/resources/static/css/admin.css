@@ -235,4 +235,11 @@ img {
   position: absolute;
 }
 
+@media (max-width: 800px) {
+  .boton-volver2 img{
+    max-height: 20px;
+    position: relative;
+  }
+
+}
 
