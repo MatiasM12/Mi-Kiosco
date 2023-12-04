@@ -75,7 +75,7 @@ public class ProductContoller {
                 String fileName = file.getOriginalFilename();
 
                 // Construir la ruta donde se guardará la foto (directorio template/img/)
-                Path dir = Paths.get("src//main//resources//static/img");
+                Path dir = Paths.get("static/img");
                 String absoluteRoute = dir.toFile().getAbsolutePath();
                 Path route = Paths.get(absoluteRoute + "//" + fileName);
 
