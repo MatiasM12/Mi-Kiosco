@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi kiosco</title>
+	<link rel="shortcut icon" href="img/logo.png">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="inicio" id="inicio">
+		<header class="encabezado">
+			<nav class="barra-de-navegacion">
+				<div class="logo">
+					<a href="http://localhost:8080/"><img src="img/logo.png" class="logo" alt=""></a>
+				</div>
+				<div class="busqueda">
+					<input class="barra-de-busqueda" id="barraBusqueda" type="search" placeholder="¿Que estas buscando?"
+						aria-label="Search">
+					<a  onclick="buscar()" class="boton-buscar">Buscar</a>
+				</div>
+				<div class="redireccionadores">
+					<a href="#productos" class="contacto">
+						<h6>Productos</h6>
+					</a>
+					<a href="#categorias" class="categorias">
+						<h6>Categorias</h6>
+					</a>
+					<a href="#" class="carrito" onclick="mostrarAviso()">
+						<img src="img/carrito.png" alt="">
+						<h1 class="cant-prductos-carrito"></h1>
+					</a>
+				</div>
+			</nav>
+		</header>
+
+		<div class="banner">
+			<h3 class="subtitulo">20% de descuentos en envios</h3>
+		</div>
+
+		<div class="destacado">
+			<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+				<!-- Añadir dinamicamente -->
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+				data-bs-slide="prev">
+				<span class="btn-anterior" aria-hidden="true"></span>
+				<img src="img/anterior.png" class="btn-anterior-img" alt="">
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+				data-bs-slide="next">
+				<span class="btn-siguiente" aria-hidden="true" ></span>
+				<img src="img/siguiente.png" class="btn-siguiente-img" alt="">
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+
+	<div class="titulo1">
+		<h1 id="productos">Productos</h1>
+	</div>
+
+	<div class="productos" id="nuevos-lanzamientos">
+		<!-- Añadir dinamicamente -->
+	</div>
+
+	<div class="boton-producto-ver-mas" id="btn-producto-ver-mas">
+		<a href="http://localhost:8080/lista-productos" class="boton-ver-mas">Ver mas productos</a>
+	</div>
+
+	<div class="titulo1">
+		<h1 id="categorias">Categorias</h1>
+	</div>
+
+	<div class="productos" id="contenedor-categorias">
+		<!-- Añadir dinamicamente -->
+	</div>
+
+	<footer class="pie-de-pagina">
+		<div class="horarios">
+			<h1>Horarios</h1>
+			<p>De lunes a vienres de 8:00hs a 19:00hs</p>
+		</div>
+		<div class="metodos-de-pago">
+			<h1>Metodos de pago</h1>
+			<img src="/img/tarjetas.png" alt="">
+		</div>
+		<div class="contactos" id="contactos">
+			<h1>Contactos</h1>
+			<a href="">Mail: mikiosco@gmail.com</a>
+			<p>Direccion: Cuba 134</p>
+		</div>
+		<div class="redes">
+			<h1>Redes</h1>
+			<a href="https://www.instagram.com/nike/?hl=es">
+				<img src="img/instagram.png" alt="">
+			</a>
+			<a href="https://es-la.facebook.com/nike/">
+				<img src="img/facebook.png" alt="">
+			</a>
+		</div>
+
+	</footer>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/buscador.js"></script>
+	<script>
+		function mostrarAviso() {
+			alert('Esta función aún no está disponible.');
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/control.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Panel de Control</title>
+</head>
+<body>
+    <header class="admin-header">
+		<img src="/img/proceso-creativo.png" >
+        <h1>Panel de Administración</h1>
+        <img src="/img/proceso-creativo.png" >
+    </header>
+
+    <div class="dashboard">
+        <div class="card">
+            <div class="card-content">
+                <img src="/img/editar.png" alt="Icono">
+                <h2>Editar Producto</h2>
+                <p>Selecciona un producto para editarlo.</p>
+                <button class="action-button" onclick="mostarVentana('http://localhost:8080/lista-editar')">Editar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <img src="/img/agregar-producto.png" alt="Icono">
+                <h2>Agregar Producto</h2>
+                <p>Añade nuevos productos.</p>
+                <button class="action-button" onclick="mostarVentana('http://localhost:8080/almacen')">Agregar Producto</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <img src="/img/quitar-producto.png" alt="Icono">
+                <h2>Eliminar Producto</h2>
+                <p>Elimina productos existentes.</p>
+                <button class="action-button" onclick="mostarVentana('http://localhost:8080/lista-eliminar')">Eliminar Producto</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <img src="/img/lista-de-productos.png" alt="Icono">
+                <h2>Ver Todos los Productos</h2>
+                <p>Consulta la lista completa de productos.</p>
+                <button class="action-button" onclick="mostarVentana('http://localhost:8080/lista-produc-admin')">Ver Lista</button>
+            </div>
+        </div>
+    </div>
+    <script>
+		function mostarVentana(url) {
+			window.location.href = url;
+		}
+	</script>
+</body>
+</html>

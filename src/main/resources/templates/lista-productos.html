@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilo.css">
+	<title>Mi kiosco</title>
+	<link rel="shortcut icon" href="img/logo.png">
+</head>
+
+<body>
+	<div class="pagina" id="pagina">
+		<header class="encabezado">
+			<nav class="barra-de-navegacion">
+				<div class="logo">
+					<a href="http://localhost:8080/"><img src="img/logo.png" class="logo" alt=""></a>
+				</div>
+				<div class="busqueda">
+					<input class="barra-de-busqueda" id="barraBusqueda" type="search" placeholder="¿Que estas buscando?"
+						aria-label="Search">
+					<a class="boton-buscar" onclick="buscar()">Buscar</a>
+				</div>
+				<div class="redireccionadores">
+					<a href="#" class="carrito" onclick="mostrarAviso()">
+						<img src="img/carrito.png" alt="">
+						<h1 class="cant-prductos-carrito"></h1>
+					</a>
+				</div>
+			</nav>
+		</header>
+
+
+		<div class="contenedor-productos">
+			<div class="productos lista" id="productos-lista">
+				<!-- Añadir dinamicamente -->
+			</div>
+		</div>
+		
+		<div class="boton-inicio" style="padding-bottom: 40px;">
+			<a href="http://localhost:8080/" class="boton-volver">Volver al Inicio</a>
+		</div>
+
+		<footer class="pie-de-pagina">
+			<div class="horarios">
+				<h1>Horarios</h1>
+				<p>De lunes a vienres de 8:00hs a 19:00hs</p>
+			</div>
+			<div class="metodos-de-pago">
+				<h1>Metodos de pago</h1>
+				<img src="img/tarjetas.png" alt="">
+			</div>
+			<div class="contactos" id="contactos">
+				<h1>Contactos</h1>
+				<a href="">Mail: mikiosco@gmail.com</a>
+				<p>Direccion: Cuba 134</p>
+			</div>
+			<div class="redes">
+				<h1>Redes</h1>
+				<a href="">
+					<img src="img/instagram.png" alt="">
+					<a href="https://www.instagram.com/nike/?hl=es"></a></a>
+				<a href="">
+					<img src="img/facebook.png" alt="">
+					<a href="https://es-la.facebook.com/nike/"></a></a>
+				</a>
+			</div>
+
+		</footer>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script type="text/javascript" src="/js/listaProductos.js"></script>
+	<script type="text/javascript" src="/js/buscador.js"></script>
+	<script>
+		function mostrarAviso() {
+			alert('Esta función aún no está disponible.');
+		}
+	</script>
+</body>
+
+</html>

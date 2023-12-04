@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.contenedor-titulo {
+    background-color: #283747;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    height: 60px;
+    padding-top: 25px;
+}
+
+.contenedor-boton2{
+	background-color: #283747;
+}
+
+.cuadricula-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta-producto {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    width: 250px; /* Ajusta el ancho de las tarjetas según sea necesario */
+    display: flex;
+    flex-direction: column; /* Añadido para que los elementos se apilen verticalmente */
+    justify-content: space-between; /* Añadido para centrar verticalmente el contenido */
+}
+
+.tarjeta-producto:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-producto img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.detalles-producto {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Añadido para que el contenido se expanda y ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Añadido para centrar verticalmente el contenido */
+}
+
+.detalles-producto h3 {
+    color: #333;
+    margin-top: 10px;
+}
+
+.detalles-producto p {
+    color: #666;
+    margin-top: 10px;
+}
+
+.boton-eliminar {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-eliminar {
+    background-color: #E74C3C;
+}
+
+
+
+.boton-eliminar:hover {
+    background-color: #c03b2c;
+}
+
+/* Estilos existentes */
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.boton-volver {
+    display: flex;
+    padding: 10px 15px;
+    background-color: #283747;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.boton-volver:hover {
+    background-color: #222f3c;
+}
+
+.boton-volver2 img{
+	max-height: 15px;
+	position: absolute;
+	padding-top: 34px;
+  padding-left: 8%;
+  background-color: #283747;
+}
+
+
+/* Reglas de medios para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .cuadricula-productos {
+        padding: 10px;
+    }
+
+    .tarjeta-producto {
+        width: calc(50% - 20px);
+    }
+}

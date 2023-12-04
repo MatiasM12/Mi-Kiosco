@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #283747;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.formulario {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lista-productos {
+    margin-top: 20px;
+}
+
+#lista-productos {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a89c0;
+}
+
+.destacado{
+    justify-content: left;
+}
+
+/* Agregar al final de tu archivo styles.css */
+
+input[type="file"] {
+    display: none; /* Oculta el botón de subir archivo nativo */
+}
+
+.custom-file-input {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.custom-file-input:hover {
+    background-color: #499e4c;
+}
+
+/* Estilo adicional para la visualización del nombre del archivo y el icono */
+.file-info {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+    color: #555;
+}
+
+.file-name {
+    display: inline-block;
+    vertical-align: middle; /* Centra verticalmente el texto */
+}
+
+.file-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle; /* Centra verticalmente el icono */
+}
+
+.contenedor-difuminado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo difuminado (ajusta el valor alpha según desees) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.mensaje-exito {
+    background-color: #4CAF50; /* Color de fondo verde, ajusta según tus preferencias */
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-size: 40px;
+    border-radius: 5px;
+    width: 60%;
+    height: 40%;
+    z-index: 1001; /* Asegura que el cartel esté sobre el fondo difuminado */
+}
+
+/* Estilos existentes */
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.boton-volver {
+    display: flex;
+    padding: 10px 15px;
+    background-color: #283747;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.boton-volver:hover {
+    background-color: #222f3c;
+}
+
+

@@ -1,0 +1,238 @@
+/* admin.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #283747;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
+.formulario {
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boton-subir {
+  background-color: #4CAF50; /* Cambia este color al que desees */
+  color: white; /* Cambia este color al que desees */
+  padding: 10px 20px;
+  border: none;
+  width: 30%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+    display: none; /* Oculta el botón de subir archivo nativo */
+}
+
+.custom-file-input {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.custom-file-input:hover {
+    background-color: #499e4c;
+}
+
+/* Estilo adicional para la visualización del nombre del archivo y el icono */
+.file-info {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+    color: #555;
+}
+
+.file-name {
+    display: inline-block;
+    vertical-align: middle; /* Centra verticalmente el texto */
+}
+
+.file-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle; /* Centra verticalmente el icono */
+}
+
+.boton-subir:hover {
+  background-color: #45a049;
+}
+
+.lista-productos {
+  margin-top: 20px;
+}
+
+#lista-productos {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: 10px;
+}
+
+.boton-agregar {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.boton-agregar:hover {
+  background-color: #2a89c0;
+}
+
+/* Estilos para la lista de productos */
+#lista-productos-container {
+    margin-top: 20px;
+}
+
+#lista-productos {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-productos li {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#lista-productos li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.producto-item {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.producto-imagen {
+    max-width: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
+    border-radius: 0 8px 8px 0;
+}
+
+.producto-detalles {
+    padding: 10px;
+    flex: 1;
+}
+
+.producto-detalles strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.boton-borrar {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* Ajusta la posición derecha según tus necesidades */
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.boton-borrar:hover {
+    background-color: #d9534f;
+}
+
+/* Estilos existentes */
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+
+.boton-volver{
+    display: flex;
+    padding: 10px 15px;
+    background-color: #283747;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    justify-content: start;
+    transition: background-color 0.3s ease;
+}
+
+.boton-volver:hover {
+    background-color: #222f3c;
+}
+
+.boton-volver2 img{
+	max-height: 25px;
+	  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+

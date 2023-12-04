@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*-------------------------------------------------------*/
+/*Index.html    -----------------------------------------*/
+/*-------------------------------------------------------*/
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background: whitesmoke;
+    width: 100%;
+}
+
+.logo{
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+.busqueda{
+    display: flex;
+    gap: 10px;
+}
+
+.barra-de-busqueda {
+    width: 300px;
+    height: 40px;
+    background: #DDDEDF;
+    border: none;
+    font-size: 12pt;
+    border-radius: 8px;
+    color: #333333;
+    padding: 8px;
+    outline: none;
+    display: flex;
+    align-items: center; 
+}
+
+.boton-buscar {
+    width: 80px;
+    height: 40px;
+    background: #DDDEDF;
+    border: none;
+    text-align: center;
+    font-size: 12pt;
+    color: #333333;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.redireccionadores{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.redireccionadores h6{
+    color: #273748;font-size: 15px;
+    align-items: center;
+}
+
+
+.redireccionadores a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+.carrito img{
+    position: relative;
+    height: 30px;
+}
+.carrito h1{
+    position: absolute;
+    font-size: 15px;
+    border-radius: 100%;
+    width: 17px;
+    text-align: center;
+    background-color: crimson;
+
+}
+
+/*-------------------------------------------------------*/
+/* Banner -------------------------------------------*/
+/*-------------------------------------------------------*/
+
+.banner {
+    font-family: 'Open Sans', sans-serif;
+    height: 80px;
+}
+
+.subtitulo {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F44336;
+}
+
+/*-------------------------------------------------------*/
+/* Carrusel --------------------------------------------*/
+/*-------------------------------------------------------*/
+.destacado {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.carousel {
+    width: 100%;
+    max-width: 1200px; 
+    overflow: hidden; 
+}
+
+.tarjeta {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body1 {
+	max-width: 50%;
+    text-align: center; /* Centra el texto */
+}
+
+.card-title {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1.5em;
+}
+
+.tarjeta img {
+    width: 50%; /* Establece el ancho de la imagen al 50% */
+    height: auto;
+}
+
+.btn-siguiente-img,
+.btn-anterior-img{
+	height: 30px;
+}
+
+.carousel-control-prev ,
+.carousel-control-next  {
+	margin-top: 320px;
+    height: 300px; /* Ajusta el tamaño de las flechas de navegación */
+}
+
+.boton-ver,
+.boton-ver-mas,
+.boton-inicio a,
+.boton-producto-ver-mas a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin: 10px auto;
+}
+
+.boton-ver:hover,
+.boton-ver-mas:hover,
+.boton-inicio a:hover,
+.boton-producto-ver-mas a:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+.boton-producto-ver-mas, .boton-inicio{
+    text-align: center;
+}
+
+/*-------------------------------------------------------*/
+/* Titulo1 ---------------------------------------------*/
+/*-------------------------------------------------------*/
+
+.titulo1 {
+    margin-top: 50px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("/img/fondo-golosinas.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titulo1 h1 {
+    color: #fff;
+}
+
+/*-------------------------------------------------------*/
+/* Tarjetas de Productos -------------------------------*/
+/*-------------------------------------------------------*/
+
+.productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.tarjeta-producto {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s linear;
+    border-radius: 2%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tarjeta-producto:hover {
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+}
+
+.img-producto img {
+    height: 250px;
+}
+
+.info-producto h2 {
+    text-align: center;
+   
+}
+
+.imagen-tarjeta{
+	width: 300px ;
+	height: 250px;
+	object-fit: cover;
+}
+
+.titulo-tarjeta{
+	width: 300px ;
+	height: 50px;
+}
+
+.precio-tarjeta {
+	padding-top: 15px;
+	font-size: 14px;
+	color: #3498db;
+    font-weight: bold;
+}
+
+
+
+/*-------------------------------------------------------*/
+/* Pie de pagina ----------------------------------------*/
+/*-------------------------------------------------------*/
+
+.pie-de-pagina {
+    background-color: whitesmoke;
+    color: #333; 
+    padding: 20px;
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pie-de-pagina h1{
+	font-size: 26px;
+}
+
+.horarios,
+.metodos-de-pago,
+.contactos,
+.redes {
+    text-align: center;
+    font-size: 14px; 
+}
+
+.pie-de-pagina a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold; 
+}
+
+.pie-de-pagina img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    max-height: 50px;
+}
+
+  
+
+/*-------------------------------------------------------*/
+/* Producto.html ---------------------------------------*/
+/*-------------------------------------------------------*/
+.producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    height: 500px;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.imagen img {
+    height: 500px;
+    padding-right: 10px;
+}
+
+.informacion {
+    display: flex;
+    height: 100%;
+    width: 600px;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+.informacion h2 {
+    font-size: 40px;
+}
+
+.boton-comprar {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin: 10px auto;
+}
+
+/*-----------------------------------------------------*/
+/* Relacionados ---------------------------------------*/
+/*-----------------------------------------------------*/
+.productos-relacionados {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/*------------------------------------------------------*/
+/* Lista-productos.html --------------------------------*/
+/*------------------------------------------------------*/
+
+.contenedor-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.lista {
+    width: 80%;
+}
+
+/*------------------------------------------------------*/
+/* Categoria.html y Busqueda.html --------------------------------*/
+/*------------------------------------------------------*/
+
+#titulo-categoria,#titulo-busqueda {
+    background-color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+    nav {
+        height: 80px;
+    }
+
+    .logo {
+        max-width: 60px; 
+    }
+
+    .barra-de-busqueda {
+        width: 80%; 
+        margin: 0 auto; 
+        display: flex;
+        align-items: center;
+    }
+
+    .boton-buscar {
+        width: 20%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .contacto,
+    .categorias {
+        display: none;
+    }
+
+    .banner {
+        height: 40px;
+    }
+
+
+    .tarjeta {
+        flex-direction: column;
+    }
+
+
+    /* producto.html */
+    .producto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: auto; 
+        padding: 10vw; 
+        font-family: 'Hind Siliguri', sans-serif;
+    }
+
+    .imagen img {
+        height: 30vw;
+        max-width: 100%;
+    }
+
+    .informacion {
+        display: flex;
+        height: auto; /* Ajustado para que el contenido determine la altura */
+        width: 80%; /* Ajustado para ser más adaptable */
+        max-width: 400px; /* Estableciendo un ancho máximo */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 4vw; /* Usando vw para adaptarse al ancho de la pantalla */
+        gap: 2vw; /* Usando vw para adaptarse al ancho de la pantalla */
+        margin: 0 auto; /* Centrando horizontalmente */
+    }
+
+    /* Lista-productos.html */
+    .lista {
+        width: 70%;
+    }
+
+
+
+    #titulo-producto {
+        font-size: 2.3vw; 
+        padding-top: 2vw; 
+        padding-left: 1vw; 
+    }
+    
+    .pie-de-pagina {
+        height: auto;
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .horarios,
+    .metodos-de-pago,
+    .contactos {
+        margin-bottom: 15px; 
+    }
+}
+
+

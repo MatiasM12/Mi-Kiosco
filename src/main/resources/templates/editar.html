@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/edit.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Editar Producto</title>
+    <style>
+        #mensaje-exito {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+	<div id="mensaje-exito" >
+		Editado correctamente
+    </div>
+    <div class="container">
+        <h1>Editar Producto</h1>
+        <form  enctype="multipart/form-data">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01">
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad">
+
+	        <label for="categoria">Categoría:</label>
+	        <select id="categoria" name="categoria">
+	          <option value="bebidas">Bebidas</option>
+	          <option value="comida">Comida</option>
+	          <option value="snacks">Snacks</option>
+	          <option value="golosinas">Golosinas</option>
+	          <option value="snacks">Helados</option>
+	          <!-- Agrega más opciones según tus necesidades -->
+	        </select>
+
+            <label for="imagen" class="custom-file-input">Subir Imagen</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" style="display: none;" onchange="displayFileNameAndIcon(this)">
+            <span id="file-info" class="file-info">
+                <span id="file-name" class="file-name">Ningún archivo seleccionado</span>
+                <span id="file-icon" class="file-icon"></span>
+            </span>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+
+            <label for="destacado">¿Es destacado?<input type="checkbox" id="destacado" name="destacado"></label>
+            
+
+            <button type="submit" onclick="enviarDatos(event)">Guardar Cambios</button>
+        </form>
+    </div>
+    <div class="contenedor-boton">
+        <a href="http://localhost:8080/lista-editar" class="boton-volver">Volver</a>
+    </div> 
+    <script>
+        function displayFileName(input) {
+            var fileName = document.getElementById("file-name");
+            fileName.textContent = input.files[0] ? input.files[0].name : "Ningún archivo seleccionado";
+        }
+    </script>
+    <script>
+        function displayFileNameAndIcon(input) {
+            var fileInfo = document.getElementById("file-info");
+            var fileName = document.getElementById("file-name");
+            var fileIcon = document.getElementById("file-icon");
+
+            fileName.textContent = input.files[0] ? input.files[0].name : "Ningún archivo seleccionado";
+            fileIcon.style.backgroundImage = input.files[0] ? "url('/img/comprobado.png')" : "none";
+            fileInfo.style.display = "inline-block";
+        }
+    </script>
+	<script type="text/javascript" src="/js/edicion.js"></script>
+
+</body>
+</html>
