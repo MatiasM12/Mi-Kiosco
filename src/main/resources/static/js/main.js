@@ -15,8 +15,8 @@ var listaDeCategorias = [
 ];
 
 function main() {
-    obtenerNuevosLanzamiento('http://localhost:8080/getAllProducts');
-    obtenerDestacados('http://localhost:8080/getAllProducts');
+    obtenerNuevosLanzamiento('https://kiosco-production.up.railway.app/getAllProducts');
+    obtenerDestacados('https://kiosco-production.up.railway.app/getAllProducts');
     listaDeCategorias.forEach(item => crearCategorias(item, tarjetasDeProductosCategorias));
     botonVerMas();
 }
@@ -104,7 +104,7 @@ function crearDestacado(lista, idDeDiv) {
 }
 
 async function obtenerDatos(id) {
-    const url = 'http://localhost:8080/product/' + id;
+    const url = 'https://kiosco-production.up.railway.app/product/' + id;
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -182,7 +182,7 @@ async function botonVerMas() {
                     let titulo = producto.querySelector('.titulo-tarjeta').textContent;
                     let categoria =  titulo;
                     localStorage.setItem("categoria", JSON.stringify(categoria));
-                    window.location.href = 'http://localhost:8080/categoria';
+                    window.location.href = 'https://kiosco-production.up.railway.app/categoria';
                 }
             });
         }
@@ -210,7 +210,7 @@ async function manejarClickEnListaDeTarjetas(listaId, listaDeProductos, selector
                 try {
                     datosDeProducto = await obtenerDatos(id);
                     localStorage.setItem("datosDeProducto", JSON.stringify(datosDeProducto));
-                    window.location.href = 'http://localhost:8080/producto';
+                    window.location.href = 'https://kiosco-production.up.railway.app/producto';
                 } catch (error) {
                     console.error('Error al obtener datos:', error);
                 }
