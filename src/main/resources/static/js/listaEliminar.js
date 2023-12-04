@@ -4,7 +4,7 @@ var divProductos = document.querySelector('.cuadricula-productos');
 var productos = [];
 
 function main() {
-    obtenerProductos('http://localhost:8080/getAllProducts');
+    obtenerProductos('https://kiosco-production.up.railway.app/getAllProducts');
     botonEliminar();
 }
 
@@ -78,7 +78,7 @@ async function botonEliminar() {
                     }
 
                     try {
-                        datosDeProducto = await eliminarData("http://localhost:8080/product/"+id);
+                        datosDeProducto = await eliminarData("https://kiosco-production.up.railway.app/product/"+id);
                     } catch (error) {
                         console.error('Error al obtener datos:', error);
                     }

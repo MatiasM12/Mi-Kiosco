@@ -31,7 +31,7 @@ function enviarDatos(event) {
 	};
 	
 	// Enviar la solicitud Put
-	var url = 'http://localhost:8080/product/'+id; // Reemplaza con la URL de tu API y el ID del producto correspondient
+	var url = 'https://kiosco-production.up.railway.app/product/'+id; // Reemplaza con la URL de tu API y el ID del producto correspondient
 	fetch(url, {
 	    method: 'PUT',
 	    headers: {

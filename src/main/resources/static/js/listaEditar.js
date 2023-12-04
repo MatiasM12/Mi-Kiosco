@@ -4,7 +4,7 @@ var divProductos = document.querySelector('.cuadricula-productos');
 var productos = [];
 
 function main() {
-    obtenerProductos('http://localhost:8080/getAllProducts');
+    obtenerProductos('https://kiosco-production.up.railway.app/getAllProducts');
 }
 
 function obtenerProductos(url) {
@@ -69,5 +69,5 @@ function botonEditar(titulo){
                     }
                 }	
 	localStorage.setItem("id",id);
-    window.location.href = 'http://localhost:8080/editar';
+    window.location.href = 'https://kiosco-production.up.railway.app/editar';
 }

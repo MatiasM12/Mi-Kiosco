@@ -7,7 +7,7 @@ function buscar() {
   localStorage.setItem('ultimaBusqueda', valorBusqueda);
 
   // Redirigir a otra página (puedes cambiar 'otraPagina.html' por la página que desees)
-  window.location.href = 'http://localhost:8080/busqueda';
+  window.location.href = 'https://kiosco-production.up.railway.app/busqueda';
 }
 
 // Escuchar el evento 'keydown' para la tecla Enter en el campo de búsqueda

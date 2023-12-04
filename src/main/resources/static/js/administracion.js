@@ -1,7 +1,7 @@
 $(document).ready(main);
 
 function main() {
-	obtenerProductos('http://localhost:8080/getAllProducts')
+	obtenerProductos('https://kiosco-production.up.railway.app/getAllProducts')
 
 
 }
@@ -30,7 +30,7 @@ function enviarDatos() {
 	};
 	
 	// Enviar la solicitud POST
-	fetch('http://localhost:8080/saveProduct', {
+	fetch('https://kiosco-production.up.railway.app/saveProduct', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ function agregarProductoALista(producto) {
 function eliminarProducto(productoId, id) {
 	// Realiza la llamada a la API para eliminar el producto por su id
 	console.log(id);
-	fetch(`http://localhost:8080/product/${id}`, {
+	fetch(`https://kiosco-production.up.railway.app/product/${id}`, {
 		method: 'DELETE',
 	})
 		.then(data => {

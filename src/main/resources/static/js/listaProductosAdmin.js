@@ -4,7 +4,7 @@ var divProductos = document.querySelector('.cuadricula-productos');
 var productos = [];
 
 function main() {
-    obtenerProductos('http://localhost:8080/getAllProducts');
+    obtenerProductos('https://kiosco-production.up.railway.app/getAllProducts');
     botonVerMas();
 }
 

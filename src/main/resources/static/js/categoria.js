@@ -10,7 +10,7 @@ var productos = [];
 
 function main() {
 	miH1.textContent = categoria;
-    obtenerProductos("http://localhost:8080/productByCategory/"+categoria.toLowerCase());
+    obtenerProductos("https://kiosco-production.up.railway.app/productByCategory/"+categoria.toLowerCase());
     botonVerMas();
 }
 
@@ -89,7 +89,7 @@ async function botonVerMas() {
                     try {
                         datosDeProducto = await obtenerDatos(id);
                         localStorage.setItem("datosDeProducto", JSON.stringify(datosDeProducto));
-                        window.location.href = 'http://localhost:8080/producto';
+                        window.location.href = 'https://kiosco-production.up.railway.app/producto';
                     } catch (error) {
                         console.error('Error al obtener datos:', error);
                     }
@@ -102,7 +102,7 @@ async function botonVerMas() {
 }
 
 async function obtenerDatos(id) {
-    const url = 'http://localhost:8080/product/' + id;
+    const url = 'https://kiosco-production.up.railway.app/product/' + id;
 
     const response = await fetch(url);
 
