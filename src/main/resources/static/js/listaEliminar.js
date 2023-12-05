@@ -49,7 +49,7 @@ function listarProductos(lista, idDiv) {
     let tarjeta = document.createElement("div");
     tarjeta.className = "tarjeta-producto";
     tarjeta.innerHTML = `
-              <img src=/img/${lista.imagen} >
+              <img src=${lista.imagen} >
             <div class="detalles-producto">
                 <h3 class="titulo-tarjeta">${lista.titulo}</h3>
                 <p>${lista.descripcion}</p>

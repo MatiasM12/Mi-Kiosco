@@ -5,9 +5,14 @@ function main() {
 
 
 }
-
-function enviarDatos() {
-	uploadFile();
+var foto1 ;
+async function enviarDatos() {
+	await uploadFile();
+	
+   if (!foto1) {
+        console.error('Error: No se ha subido ninguna imagen.');
+        return;
+    }
 	// Obtener los valores del formulario
 	var nombre = document.getElementById('nombre').value;
 	var cantidad = document.getElementById('cantidad').value;
@@ -15,7 +20,7 @@ function enviarDatos() {
 	var categoria = document.getElementById('categoria').value;
 	var descripcion = document.getElementById('descripcion').value;
 	var destacado = document.getElementById('destacado').checked;
-	var foto = document.getElementById('foto').files[0].name;
+	
 
 	// Crear un objeto con los datos
 	var datosProducto = {
@@ -26,7 +31,7 @@ function enviarDatos() {
 		total: parseInt(cantidad), // Convertir a número entero si es necesario
 		stock: true,
 		fav: destacado,
-		image: foto
+		image: foto1
 	};
 	
 	// Enviar la solicitud POST
@@ -40,30 +45,33 @@ function enviarDatos() {
 		.then(response => response.json())
 		.then(data => console.log(data))
 		.catch(error => console.error('Error:', error));
+
 }
 
-function uploadFile() {
+
+async function uploadFile() {
 	var inputFile = document.getElementById('foto');
 	var file = inputFile.files[0];
-
+	
+	
 	var formData = new FormData();
 	formData.append('foto', file);
 
-	$.ajax({
-		url: '/guardarFoto',
-		type: 'POST',
-		data: formData,
-		processData: false,
-		contentType: false,
-		success: function(data) {
-			console.log(data);
-			alert('La imagen se subio correctamente, por favor llene los datos restantes');
-		},
-		error: function(error) {
-			console.error(error);
-			alert('Error al subir el archivo');
-		}
-	});
+try {
+    const response = await fetch('https://kiosco-production.up.railway.app/guardarFoto', {
+        method: 'POST',
+        body: formData
+    });
+
+    if (response.ok) {
+        foto1 = await response.text();  // Asegúrate de manejar el formato correcto
+        console.log(foto1)
+    } else {
+        console.error('Error al subir la foto:', response.statusText);
+    }
+} catch (error) {
+    console.error('Error inesperado:', error);
+}
 }
 
 
@@ -79,7 +87,7 @@ function agregarProductoALista(producto) {
 
 	nuevoProducto.innerHTML = `
         <div class="producto-item" id="producto-${producto.id}">
-        <img src="/img/${producto.image}" alt="Imagen del producto" class="producto-imagen">
+        <img src="${producto.image}" alt="Imagen del producto" class="producto-imagen">
 	    <div class="producto-detalles">
 	        <strong>${producto.name}</strong><br>
 	        Precio: ${producto.price}<br>

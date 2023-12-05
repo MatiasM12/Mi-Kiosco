@@ -16,7 +16,7 @@ function crearProducto() {
 
     tarjeta.innerHTML = `
         <div class="imagen">
-            <img src=/img/${datosDeProducto.imagen} alt="">
+            <img src=${datosDeProducto.imagen} alt="">
         </div>
         <div class="informacion">
             <h2 class="titulo">${datosDeProducto.titulo}</h2>
@@ -74,7 +74,7 @@ function crearRelacionados(lista, idDiv) {
 
     tarjeta.innerHTML = `
         <div class="img-producto">
-            <img src=/img/${lista.imagen} alt="" class="imagen-tarjeta">
+            <img src=${lista.imagen} alt="" class="imagen-tarjeta">
         </div>
         <div class="info-producto">
             <h2 class="titulo-tarjeta">${lista.titulo}</h2>

@@ -57,7 +57,7 @@ function listarProductos(lista, idDiv) {
     tarjeta.className = "tarjeta-producto";
     tarjeta.innerHTML = `
         <div class="img-producto">
-            <img src=/img/${lista.imagen} alt="" class="imagen-tarjeta">
+            <img src=${lista.imagen} alt="" class="imagen-tarjeta">
         </div>
         <div class="info-producto">
             <h2 class="titulo-tarjeta">${lista.titulo}</h2>

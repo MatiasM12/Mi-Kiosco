@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import com.kiosco.entities.Product;
 import com.kiosco.services.ProductService;
 
@@ -26,16 +29,29 @@ import com.kiosco.services.ProductService;
 public class ProductContoller {
 	@Autowired
 	private ProductService productRepo;
+	Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
+			  "cloud_name", "dbbuyidxq",
+			  "api_key", "385424588965612",
+			  "api_secret", "hCwmZ7DcGrUfhPuYgTeauLy2_4Y"));
 	
 	@GetMapping("/getAllProducts")
 	public List<Product> getAll() {
 		return productRepo.getAll();
 	}
 	
-    @PostMapping("/saveProduct")
-    public void saveEmployee(@RequestBody Product product) {
-        productRepo.save(product);
-    }
+	@PostMapping("/saveProduct")
+	public ResponseEntity<String> saveProduct(@RequestBody Product product) {
+	    try {
+	        // Lógica para guardar el producto en la base de datos
+	    	productRepo.save(product);
+
+	        return new ResponseEntity<>("Producto guardado correctamente", HttpStatus.OK);
+	    } catch (Exception e) {
+	        // Manejo de excepciones
+	        e.printStackTrace();
+	        return new ResponseEntity<>("Error al guardar el producto: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+	    }
+	}
     
     @GetMapping("/product/{id}")
     public Product getEmployeeById(@PathVariable("id") Long id) {
@@ -71,20 +87,14 @@ public class ProductContoller {
     public ResponseEntity<String> handleFileUpload(@RequestParam("foto") MultipartFile file) {
         if (!file.isEmpty()) {
             try {
-                // Obtener el nombre original del archivo
-                String fileName = file.getOriginalFilename();
+                // Subir el archivo a Cloudinary
+                Map uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
 
-                // Construir la ruta donde se guardará la foto (directorio template/img/)
-                Path dir = Paths.get("static/img");
-                String absoluteRoute = dir.toFile().getAbsolutePath();
-                Path route = Paths.get(absoluteRoute + "//" + fileName);
+                // Obtener la URL de la imagen subida
+                String imageUrl = (String) uploadResult.get("secure_url");
 
-                // Guardar el archivo
-                byte[] bytesImg = file.getBytes();
-                Files.write(route, bytesImg);
-
-                // Devolver una respuesta exitosa
-                return new ResponseEntity<>("Archivo guardado correctamente", HttpStatus.OK);
+                // Devolver la URL en la respuesta
+                return new ResponseEntity<>(imageUrl, HttpStatus.OK);
             } catch (IOException e) {
                 e.printStackTrace();
                 // Devolver una respuesta de error
@@ -95,5 +105,6 @@ public class ProductContoller {
             return new ResponseEntity<>("No se proporcionó un archivo", HttpStatus.BAD_REQUEST);
         }
     }
+
    
 }

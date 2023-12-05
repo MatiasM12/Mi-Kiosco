@@ -7,11 +7,11 @@ var tarjetasDeProductosDestacados = document.querySelector(".carousel");
 var listaDeNuevosLanzamientos = [];
 var listaDeDestacados = [];
 var listaDeCategorias = [
-    { imagen: "/img/refresco.png", titulo: "Bebidas" },
-    { imagen: "img/golosinas.png", titulo: "Golosinas" },
-    { imagen: "/img/pancho.png", titulo: "Comida" },
-    { imagen: "/img/helado.png", titulo: "Helado" },
-    { imagen: "/img/productos.png", titulo: "Snacks" }
+    { imagen: "refresco.png", titulo: "Bebidas" },
+    { imagen: "golosinas.png", titulo: "Golosinas" },
+    { imagen: "pancho.png", titulo: "Comida" },
+    { imagen: "helado.png", titulo: "Helado" },
+    { imagen: "productos.png", titulo: "Snacks" }
 ];
 
 function main() {
@@ -97,7 +97,7 @@ function crearDestacado(lista, idDeDiv) {
                 <p class="card-text">${lista.descripcion}</p>
                 <a class="boton-ver">Ir al producto</a>
             </div>
-            <img class="card-img-top" src=/img/${lista.imagen}>
+            <img class="card-img-top" src=${lista.imagen}>
         </div>
     `;
     idDeDiv.append(carusel);
@@ -130,7 +130,7 @@ function crearTarjeta(lista, idDiv) {
     tarjeta.className = "tarjeta-producto";
     tarjeta.innerHTML = `
         <div class="img-producto">
-            <img src=/img/${lista.imagen} class="imagen-tarjeta" alt="">
+            <img src=${lista.imagen} class="imagen-tarjeta" alt="">
         </div>
         <div class="info-producto">
             <h2 class="titulo-tarjeta">${lista.titulo}</h2>
