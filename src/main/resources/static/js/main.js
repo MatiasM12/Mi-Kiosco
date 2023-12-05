@@ -7,11 +7,11 @@ var tarjetasDeProductosDestacados = document.querySelector(".carousel");
 var listaDeNuevosLanzamientos = [];
 var listaDeDestacados = [];
 var listaDeCategorias = [
-    { imagen: "refresco.png", titulo: "Bebidas" },
-    { imagen: "golosinas.png", titulo: "Golosinas" },
-    { imagen: "pancho.png", titulo: "Comida" },
-    { imagen: "helado.png", titulo: "Helado" },
-    { imagen: "productos.png", titulo: "Snacks" }
+    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738763/isniwemvtyuutyuj4qvy.png", titulo: "Bebidas" },
+    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738762/m3t2payastip3l7cibht.png", titulo: "Golosinas" },
+    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738760/h0po17t4wdyz3k3x9ktk.png", titulo: "Comida" },
+    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738753/drf2vdv5guarsksdrg0u.png", titulo: "Helado" },
+    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738744/sj5oynunpg8vuer0jufn.png", titulo: "Snacks" }
 ];
 
 function main() {
