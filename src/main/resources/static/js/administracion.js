@@ -6,7 +6,8 @@ function main() {
 
 }
 var foto1 ;
-async function enviarDatos() {
+async function enviarDatos(event) {
+	event.preventDefault();
 	await uploadFile();
 	
    if (!foto1) {
