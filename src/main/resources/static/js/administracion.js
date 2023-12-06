@@ -6,7 +6,8 @@ function main() {
 
 }
 var foto1 ;
-async function enviarDatos() {
+async function enviarDatos(event) {
+	event.preventDefault();
 	await uploadFile();
 	
    if (!foto1) {
@@ -35,16 +36,22 @@ async function enviarDatos() {
 	};
 	
 	// Enviar la solicitud POST
-	fetch('https://kiosco-production.up.railway.app/saveProduct', {
-		method: 'POST',
-		headers: {
+	try {
+		// Enviar la solicitud POST
+		const response = await fetch('https://kiosco-production.up.railway.app/saveProduct', {
+		  method: 'POST',
+		  headers: {
 			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(datosProducto),
-	})
-		.then(response => response.json())
-		.then(data => console.log(data))
-		.catch(error => console.error('Error:', error));
+		  },
+		  body: JSON.stringify(datosProducto),
+		  credentials: 'include',
+		});
+	
+		const data = await response;
+		console.log(data);
+	  } catch (error) {
+		console.error('Error:', error);
+	  }
 
 }
 
