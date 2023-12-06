@@ -102,7 +102,7 @@ body {
     }
 
     .card {
-        width: 80%;
+        width: 90%;
         max-width: none;
         margin: 10px 0; /* Añade margen arriba y abajo para espaciar las tarjetas */
     }
