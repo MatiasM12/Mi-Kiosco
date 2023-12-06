@@ -8,10 +8,10 @@ var listaDeNuevosLanzamientos = [];
 var listaDeDestacados = [];
 var listaDeCategorias = [
     { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738763/isniwemvtyuutyuj4qvy.png", titulo: "Bebidas" },
-    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738762/m3t2payastip3l7cibht.png", titulo: "Golosinas" },
+    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738744/sj5oynunpg8vuer0jufn.png", titulo: "Golosinas" },
     { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738760/h0po17t4wdyz3k3x9ktk.png", titulo: "Comida" },
     { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738753/drf2vdv5guarsksdrg0u.png", titulo: "Helado" },
-    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738744/sj5oynunpg8vuer0jufn.png", titulo: "Snacks" }
+    { imagen: "https://res.cloudinary.com/dbbuyidxq/image/upload/v1701738762/m3t2payastip3l7cibht.png", titulo: "Snacks" }
 ];
 
 function main() {
