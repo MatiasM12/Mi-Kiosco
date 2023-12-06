@@ -48,6 +48,7 @@ async function enviarDatos(event) {
 		});
 	
 		const data = await response;
+		location.reload();
 		console.log(data);
 	  } catch (error) {
 		console.error('Error:', error);
