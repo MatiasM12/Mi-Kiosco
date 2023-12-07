@@ -50,8 +50,8 @@ button {
 }
 
 .boton-subir {
-  background-color: #4CAF50; /* Cambia este color al que desees */
-  color: white; /* Cambia este color al que desees */
+  background-color: #4CAF50; 
+  color: white; 
   padding: 10px 20px;
   border: none;
   width: 30%;
@@ -60,7 +60,7 @@ button {
 }
 
 input[type="file"] {
-    display: none; /* Oculta el botón de subir archivo nativo */
+    display: none; 
 }
 
 .custom-file-input {
@@ -79,7 +79,6 @@ input[type="file"] {
     background-color: #499e4c;
 }
 
-/* Estilo adicional para la visualización del nombre del archivo y el icono */
 .file-info {
     margin-top: 10px;
     display: inline-block;
@@ -89,7 +88,7 @@ input[type="file"] {
 
 .file-name {
     display: inline-block;
-    vertical-align: middle; /* Centra verticalmente el texto */
+    vertical-align: middle; 
 }
 
 .file-icon {
@@ -99,7 +98,7 @@ input[type="file"] {
     margin-left: 5px;
     background-repeat: no-repeat;
     background-size: cover;
-    vertical-align: middle; /* Centra verticalmente el icono */
+    vertical-align: middle; 
 }
 
 .boton-subir:hover {
@@ -139,7 +138,6 @@ img {
   background-color: #2a89c0;
 }
 
-/* Estilos para la lista de productos */
 #lista-productos-container {
     margin-top: 20px;
 }
@@ -173,7 +171,7 @@ img {
 }
 
 .producto-imagen {
-    max-width: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
+    max-width: 150px; 
     border-radius: 0 8px 8px 0;
 }
 
@@ -195,7 +193,7 @@ img {
     border-radius: 4px;
     cursor: pointer;
     position: absolute;
-    right: 10px; /* Ajusta la posición derecha según tus necesidades */
+    right: 10px; 
     transition: background-color 0.3s ease;
     align-items: center;
 }
@@ -204,7 +202,7 @@ img {
     background-color: #d9534f;
 }
 
-/* Estilos existentes */
+
 .contenedor-boton{
     display: flex;
     justify-content: center;

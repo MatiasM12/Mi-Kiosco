@@ -82,10 +82,8 @@ button:hover {
     justify-content: left;
 }
 
-/* Agregar al final de tu archivo styles.css */
-
 input[type="file"] {
-    display: none; /* Oculta el botón de subir archivo nativo */
+    display: none; 
 }
 
 .custom-file-input {
@@ -104,7 +102,7 @@ input[type="file"] {
     background-color: #499e4c;
 }
 
-/* Estilo adicional para la visualización del nombre del archivo y el icono */
+
 .file-info {
     margin-top: 10px;
     display: inline-block;
@@ -114,7 +112,7 @@ input[type="file"] {
 
 .file-name {
     display: inline-block;
-    vertical-align: middle; /* Centra verticalmente el texto */
+    vertical-align: middle; 
 }
 
 .file-icon {
@@ -124,7 +122,7 @@ input[type="file"] {
     margin-left: 5px;
     background-repeat: no-repeat;
     background-size: cover;
-    vertical-align: middle; /* Centra verticalmente el icono */
+    vertical-align: middle; 
 }
 
 .contenedor-difuminado {
@@ -133,7 +131,7 @@ input[type="file"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo difuminado (ajusta el valor alpha según desees) */
+    background: rgba(0, 0, 0, 0.5); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,7 +140,7 @@ input[type="file"] {
 }
 
 .mensaje-exito {
-    background-color: #4CAF50; /* Color de fondo verde, ajusta según tus preferencias */
+    background-color: #4CAF50; 
     color: white;
     text-align: center;
     display: flex;
@@ -153,10 +151,10 @@ input[type="file"] {
     border-radius: 5px;
     width: 60%;
     height: 40%;
-    z-index: 1001; /* Asegura que el cartel esté sobre el fondo difuminado */
+    z-index: 1001; 
 }
 
-/* Estilos existentes */
+
 .contenedor-boton{
     display: flex;
     justify-content: center;

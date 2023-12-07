@@ -80,7 +80,7 @@ public class ProductContoller {
         return productRepo.getProductByName(name);
     }
     
-    @PostMapping("/guardarFoto")
+    @PostMapping("/saveImage")
     public ResponseEntity<String> handleFileUpload(@RequestParam("foto") MultipartFile file) {
         if (!file.isEmpty()) {
             try {

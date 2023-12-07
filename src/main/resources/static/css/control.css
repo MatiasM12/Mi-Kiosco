@@ -29,8 +29,6 @@ body {
 	padding: 15px;
 }
 
-
-
 .dashboard {
     display: flex;
     justify-content: center;
@@ -98,12 +96,12 @@ body {
 @media (max-width: 768px) {
     .dashboard {
         flex-direction: column;
-        align-items: center; /* Alinea las tarjetas al centro en pantallas más pequeñas */
+        align-items: center; 
     }
 
     .card {
         width: 90%;
         max-width: none;
-        margin: 10px 0; /* Añade margen arriba y abajo para espaciar las tarjetas */
+        margin: 10px 0;
     }
 }

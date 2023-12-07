@@ -5,12 +5,12 @@ function main() {
 
 
 }
-var foto1 ;
+var foto ;
 async function enviarDatos(event) {
 	event.preventDefault();
-	await uploadFile();
+	await subirImagen();
 	
-   if (!foto1) {
+   if (!foto) {
         console.error('Error: No se ha subido ninguna imagen.');
         return;
     }
@@ -32,7 +32,7 @@ async function enviarDatos(event) {
 		total: parseInt(cantidad), // Convertir a número entero si es necesario
 		stock: true,
 		fav: destacado,
-		image: foto1
+		image: foto
 	};
 	
 	// Enviar la solicitud POST
@@ -57,29 +57,27 @@ async function enviarDatos(event) {
 }
 
 
-async function uploadFile() {
+async function subirImagen() {
 	var inputFile = document.getElementById('foto');
 	var file = inputFile.files[0];
-	
 	
 	var formData = new FormData();
 	formData.append('foto', file);
 
-try {
-    const response = await fetch('https://kiosco-production.up.railway.app/guardarFoto', {
-        method: 'POST',
-        body: formData
-    });
+	try {
+		const response = await fetch('https://kiosco-production.up.railway.app/saveImage', {
+			method: 'POST',
+			body: formData
+		});
 
-    if (response.ok) {
-        foto1 = await response.text();  // Asegúrate de manejar el formato correcto
-        console.log(foto1)
-    } else {
-        console.error('Error al subir la foto:', response.statusText);
-    }
-} catch (error) {
-    console.error('Error inesperado:', error);
-}
+		if (response.ok) {
+			foto = await response.text();
+		} else {
+			console.error('Error al subir la foto:', response.statusText);
+		}
+	} catch (error) {
+		console.error('Error inesperado:', error);
+	}
 }
 
 
@@ -91,7 +89,7 @@ function agregarProductoALista(producto) {
 	// Crea un nuevo elemento de lista (li) con los detalles del producto
 	var nuevoProducto = document.createElement('li');
 	var productoId = `producto-${producto.id}`;
-	nuevoProducto.id = productoId; // Asigna un ID único
+	nuevoProducto.id = productoId; 
 
 	nuevoProducto.innerHTML = `
         <div class="producto-item" id="producto-${producto.id}">
@@ -133,7 +131,6 @@ function eliminarProducto(productoId, id) {
 
 var productos = []
 
-
 function obtenerProductos(url) {
 	// Realizar la llamada a la API utilizando fetch
 	fetch(url)
@@ -165,7 +162,6 @@ function obtenerProductos(url) {
 				}
 				// Aquí puedes acceder a las propiedades del producto
 				productos.push(datosDeProducto);
-				console.log(productos);
 			}
 			// Llamar a agregarProductoALista después de vaciar el array
 			productos.forEach(item => agregarProductoALista(item));

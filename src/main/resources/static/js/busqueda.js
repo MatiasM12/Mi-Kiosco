@@ -5,7 +5,6 @@ var busqueda = localStorage.getItem("ultimaBusqueda");
 const miDiv = document.getElementById('titulo-busqueda');
 const miH1 = miDiv.querySelector('h1');
 
-
 var productos = [];
 
 function main() {

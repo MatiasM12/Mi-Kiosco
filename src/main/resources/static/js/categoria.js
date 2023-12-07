@@ -5,7 +5,6 @@ var categoria = JSON.parse(localStorage.getItem("categoria"));
 const miDiv = document.getElementById('titulo-categoria');
 const miH1 = miDiv.querySelector('h1');
 
-
 var productos = [];
 
 function main() {

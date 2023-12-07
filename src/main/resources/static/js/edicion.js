@@ -21,17 +21,17 @@ function enviarDatos(event) {
 	// Crear un objeto con los datos
 	var datosProducto = {
 		name: nombre,
-		price: parseFloat(precio), // Convertir a número flotante si es necesario
+		price: parseFloat(precio), 
 		category: categoria,
 		description: descripcion,
-		total: parseInt(cantidad), // Convertir a número entero si es necesario
+		total: parseInt(cantidad), 
 		stock: true,
 		fav: destacado,
 		image: foto
 	};
 	
 	// Enviar la solicitud Put
-	var url = 'https://kiosco-production.up.railway.app/product/'+id; // Reemplaza con la URL de tu API y el ID del producto correspondient
+	var url = 'https://kiosco-production.up.railway.app/product/'+id; 
 	fetch(url, {
 	    method: 'PUT',
 	    headers: {
@@ -56,7 +56,6 @@ function enviarDatos(event) {
 function uploadFile() {
 	var inputFile = document.getElementById('foto');
 	
-	
 	if(inputFile != null){
 		var file = inputFile.files[0];
 		
@@ -64,7 +63,7 @@ function uploadFile() {
 		formData.append('foto', file);
 	
 		$.ajax({
-			url: '/guardarFoto',
+			url: '/saveImage',
 			type: 'POST',
 			data: formData,
 			processData: false,

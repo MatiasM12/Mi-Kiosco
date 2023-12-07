@@ -457,18 +457,18 @@ nav{
 
     .informacion {
         display: flex;
-        height: auto; /* Ajustado para que el contenido determine la altura */
-        width: 80%; /* Ajustado para ser más adaptable */
-        max-width: 400px; /* Estableciendo un ancho máximo */
+        height: auto; 
+        width: 80%; 
+        max-width: 400px; 
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 4vw; /* Usando vw para adaptarse al ancho de la pantalla */
-        gap: 2vw; /* Usando vw para adaptarse al ancho de la pantalla */
-        margin: 0 auto; /* Centrando horizontalmente */
+        font-size: 4vw; 
+        gap: 2vw; 
+        margin: 0 auto; /
     }
 
-    /* Lista-productos.html */
+
     .lista {
         width: 70%;
     }

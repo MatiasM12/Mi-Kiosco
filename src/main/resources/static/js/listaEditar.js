@@ -61,13 +61,12 @@ function listarProductos(lista, idDiv) {
 }
 
 function botonEditar(titulo){
-	               let id = "";
-
-                for (let i = 0; i < productos.length; i++) {
-                    if (productos[i].titulo == titulo) {
-                        id = productos[i].id;
-                    }
-                }	
+	let id = "";
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].titulo == titulo) {
+            id = productos[i].id;
+        }
+    }	
 	localStorage.setItem("id",id);
     window.location.href = 'https://kiosco-production.up.railway.app/editar';
 }

@@ -38,10 +38,10 @@ body {
     border-radius: 8px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
-    width: 250px; /* Ajusta el ancho de las tarjetas según sea necesario */
+    width: 250px;
     display: flex;
-    flex-direction: column; /* Añadido para que los elementos se apilen verticalmente */
-    justify-content: space-between; /* Añadido para centrar verticalmente el contenido */
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tarjeta-producto:hover {
@@ -58,10 +58,10 @@ body {
 .detalles-producto {
     padding: 15px;
     text-align: center;
-    flex-grow: 1; /* Añadido para que el contenido se expanda y ocupe el espacio disponible */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Añadido para centrar verticalmente el contenido */
+    justify-content: center; 
 }
 
 .detalles-producto h3 {
@@ -94,7 +94,6 @@ body {
     background-color: #c03b2c;
 }
 
-/* Estilos existentes */
 .contenedor-boton{
     display: flex;
     justify-content: center;
@@ -125,7 +124,6 @@ body {
 }
 
 
-/* Reglas de medios para dispositivos más pequeños */
 @media (max-width: 768px) {
     .cuadricula-productos {
         padding: 10px;
