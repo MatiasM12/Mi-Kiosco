@@ -30,10 +30,8 @@ import com.kiosco.services.ProductService;
 public class ProductContoller {
 	@Autowired
 	private ProductService productRepo;
-	Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
-			  "cloud_name", "dbbuyidxq",
-			  "api_key", "385424588965612",
-			  "api_secret", "hCwmZ7DcGrUfhPuYgTeauLy2_4Y"));
+    @Autowired
+	private Cloudinary cloudinary;
 	
 	@GetMapping("/getAllProducts")
 	public List<Product> getAll() {
@@ -44,12 +42,9 @@ public class ProductContoller {
 	@PostMapping("/saveProduct")
 	public ResponseEntity<String> saveProduct(@RequestBody Product product) {
 	    try {
-	        // Lógica para guardar el producto en la base de datos
 	    	productRepo.save(product);
-
 	        return new ResponseEntity<>("Producto guardado correctamente", HttpStatus.OK);
 	    } catch (Exception e) {
-	        // Manejo de excepciones
 	        e.printStackTrace();
 	        return new ResponseEntity<>("Error al guardar el producto: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 	    }
@@ -89,21 +84,17 @@ public class ProductContoller {
     public ResponseEntity<String> handleFileUpload(@RequestParam("foto") MultipartFile file) {
         if (!file.isEmpty()) {
             try {
-                // Subir el archivo a Cloudinary
-                Map uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
+                @SuppressWarnings("rawtypes")
+				Map uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
 
-                // Obtener la URL de la imagen subida
                 String imageUrl = (String) uploadResult.get("secure_url");
 
-                // Devolver la URL en la respuesta
                 return new ResponseEntity<>(imageUrl, HttpStatus.OK);
             } catch (IOException e) {
                 e.printStackTrace();
-                // Devolver una respuesta de error
                 return new ResponseEntity<>("Error al guardar el archivo: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
             }
         } else {
-            // Devolver una respuesta de error si no se proporcionó un archivo
             return new ResponseEntity<>("No se proporcionó un archivo", HttpStatus.BAD_REQUEST);
         }
     }
