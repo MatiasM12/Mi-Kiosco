@@ -64,4 +64,4 @@ Para preguntas o comentarios, no dudes en contactarme:
 - [LinkedIn](https://www.linkedin.com/mynetwork/)
 - [Correo Electrónico](mailto:matias.agustin.morales@gmail.com)
 
-¡Gracias por explorar nuestro Kiosco Virtual! 🛒✨
+¡Gracias por explorar mi Kiosco Virtual! 🛒✨
